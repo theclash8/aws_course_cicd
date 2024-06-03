@@ -26,7 +26,3 @@ jobs:
         shell: bash
         env:
           GITHUB_ACTION_PATH: ${{ github.action_path }}
-
-branding:
-  icon: "terminal"
-  color: "gray-dark"
