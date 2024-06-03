@@ -23,5 +23,5 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.ID_RSA }}
         port: 22
-        script: git clone git@github.com:theclash8/aws_course_cicd.git -C /var/www/html
+        script: curl https://raw.githubusercontent.com/theclash8/aws_course_cicd/main/entrypoint.sh | bash -
                  
