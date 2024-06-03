@@ -16,13 +16,11 @@ jobs:
   build:
     runs-on: Linux
     steps:
-      - name: Set GitHub Path
-        run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
-        shell: bash
-        env:
-          GITHUB_ACTION_PATH: ${{ github.action_path }}
-      - name: Run entrypoint.sh
-        run: entrypoint.sh
-        shell: bash
-        env:
-          GITHUB_ACTION_PATH: ${{ github.action_path }}
+    - name: SSH Remote Commands
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER}}
+        port: 22
+        script: git@github.com:theclash8/aws_course_cicd.git -C /var/www/html
+                 
