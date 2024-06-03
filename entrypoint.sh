@@ -5,6 +5,6 @@ set -o nounset
 set -o pipefail
 
 cd /tmp
-git clone git@github.com:theclash8/aws_course_cicd.github
+git clone https://github.com/theclash8/aws_course_cicd.git
 cp -Rp aws_course_cicd/asset aws_course_cicd.github/index.html /var/www/html
 rm -rf aws_course_cicd/
