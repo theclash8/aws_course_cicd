@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: Linux
+    runs-on: ubuntu-latest
     steps:
     - name: SSH Remote Commands
       uses: appleboy/ssh-action@v1.0.3
