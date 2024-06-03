@@ -1,5 +1,5 @@
-name: "SSH Remote Commands"
-description: "Executing remote ssh commands"
+name: "SSH Remote Comm
+
 on:
   push:
     branches:
